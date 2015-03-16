@@ -1,0 +1,42 @@
+<configuration scan="true">
+    <property resource="backrestore-config.properties"/>
+    <!-- Insert the current time formatted as "yyyyMMdd'T'HHmmss" under
+       the key "bySecond" into the logger context. This value will be
+       available to all subsequent configuration elements. -->
+    <timestamp key="byDay" datePattern="yyyy-MM-dd"/>
+    <timestamp key="byTime" datePattern="HHmmss"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 日志输出编码 -->
+        <!--<Encoding>UTF-8</Encoding>-->
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%-4level] %logger{36}[%L] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 日志输出编码 -->
+        <!--<Encoding>UTF-8</Encoding>-->
+        <File>${logback_log_base}LogBack_WorkingLog_${byDay}_${byTime}.log</File>
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>%d{yyyy-MM-dd}_WorkingLog.log.zip</FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>-->
+        <!--<Prudent>true</Prudent>-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>%d{yyyy-MM-dd}_WorkingLog.log</FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>[%d{yyyy-MM-dd HH:mm:ss}] [%-4level] %logger{36}[%L] - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <!--<logger name="org.testng" level="info"/>-->
+    <logger name="org.hibernate" level="warn"/>
+</configuration>

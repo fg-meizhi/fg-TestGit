@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中行网银项目组服务器维护</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">IBM中行网银项目组服务器管理</div>
+    <div class="content">
+        <p class="tips">请选择您要维护的项目</p>
+
+        <div class="menu-box">
+            <div class="menu">
+                <span class="title">WEBAG</span>
+                <ul class="list">
+                    <li>
+                        <input type="checkbox" id="all">
+                        <label for="all">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check01">
+                        <label for="check01">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check02">
+                        <label for="check02">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check03">
+                        <label for="check03">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check04">
+                        <label for="check04">全选</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <span class="title">JIRA</span>
+                <ul class="list">
+                    <li>
+                        <input type="checkbox" id="all02">
+                        <label for="all05">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check1">
+                        <label for="check1">程序</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check2">
+                        <label for="check2">数据库</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check3">
+                        <label for="check3">数据及附件</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <span class="title">CONFLUENCE</span>
+                <ul class="list">
+                    <li>
+                        <input type="checkbox" id="all03">
+                        <label for="all05">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checka1">
+                        <label for="checka1">程序</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checka2">
+                        <label for="checka2">数据库</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checka3">
+                        <label for="checka3">数据及附件</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <span class="title">INTRENET</span>
+                <ul class="list">
+                    <li>
+                        <input type="checkbox" id="all04">
+                        <label for="all04">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkb1">
+                        <label for="checkb1">程序</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkb2">
+                        <label for="checkb2">数据库</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkb3">
+                        <label for="checkb3">数据及附件</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <span class="title">CAM&CAS</span>
+                <ul class="list">
+                    <li>
+                        <input type="checkbox" id="all05">
+                        <label for="all05">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkc1">
+                        <label for="checkc1">程序</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkc2">
+                        <label for="checkc2">数据库</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkc3">
+                        <label for="checkc3">数据及附件</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <span class="title">SVN</span>
+                <ul class="list">
+                    <li>
+                        <input type="checkbox" id="all06">
+                        <label for="all06">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check001">
+                        <label for="check001">BOC15</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check002">
+                        <label for="check002">BOCCOP</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check003">
+                        <label for="check003">BOCEA</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check004">
+                        <label for="check004">BOC2.0</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <span class="title">FTP</span>
+                <ul class="list clearfix">
+                    <li>
+                        <input type="checkbox" id="all07">
+                        <label for="all07">全选</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkd1">
+                        <label for="checkd1">程序</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkd2">
+                        <label for="checkd2">数据库</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkd3">
+                        <label for="checkd3">数据及附件</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p>
+            <span>您选择的项目有:</span>
+            <span>SVN:</span>
+            <span>boc1.5</span>
+            ,
+            <span>Confluence:</span>
+            <span>数据库</span>
+            ,
+        </p>
+
+        <div class="tac">
+            <a href="javascript:void(0)" class="btn">备份</a>
+        </div>
+        <p class="tips">历史操作</p>
+        <dl class="history">
+            <dt>
+                <a href="javascript:void(0)">2015-03-04</a>
+            </dt>
+            <dd><em class="time">14:30:01</em>
+                <a class="log-name" href="javascript:void(0)" id="JobLog_2015-03-04_14-01-21"
+                   filename="JobLog_2015-03-04_14-01-21.log">JobLog_2015-03-04_14-01-21.log</a>
+
+                <div class="log-detail"
+                     id="JobLog_2015-03-04_14-01-21_content">
+                    <p>
+                        <span class="timemark">[2015-03-04 14:01:21]</span>
+							<span>[INFO]备份脚本路径:
+        /Users/maven/BaiDuPan/m/Work/IBM/BOC/ServerConfiguration/trunk/code/sc_backrestore/target/classes/backupScripts/
+						</span></p>
+
+                    <p>
+							<span class="timemark">
+								[2015-03-04
+        14:01:21]
+							</span>
+							<span>[INFO] 恢复脚本路径:
+        /Users/maven/BaiDuPan/m/Work/IBM/BOC/ServerConfiguration/trunk/code/sc_backrestore/target/classes/restoreScripts/
+						</span></p>
+
+                    <p>
+							<span class="timemark">
+								[2015-03-04
+        14:01:21]
+							</span>
+							<span>[INFO] -----
+						</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:01:21]</span>
+							<span>[INFO] 开始执行任务组：Job_BackUp
+						</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:01:21]</span>
+							<span>[INFO]
+        待执行任务：Job_BackUp.Job_Backup_WebAG_FTP
+						</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:01:21]</span>
+							<span>[INFO] 待执行任务：Job_BackUp.Job_Backup_WebAG_DB
+						</span></p>
+
+                    <p>
+							<span class="timemark">
+								[2015-03-04
+        14:01:21]</span> <span>[INFO] 待执行任务：Job_BackUp.Job_Backup_WebAG_Program
+							
+    </span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:01:21]</span>
+								<span>[INFO] -----
+							</span></p>
+
+                    <p>
+								<span class="timemark">
+									[2015-03-04
+        14:02:00]
+								</span>
+								<span>[INFO] 即将执行Job：Job_BackUp.Job_Backup_WebAG_Program
+							</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:02:00]</span>
+								<span>[INFO] =====Job
+        Start=====备份WebAG的程序文件=====
+							</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:02:00]</span>
+								<span>[INFO]
+        执行命令：/Users/maven/BaiDuPan/m/Work/IBM/BOC/ServerConfiguration/trunk/code/sc_backrestore/target/classes/backupScripts/webag_program_backup.sh
+							</span></p>
+
+                    <p>
+								<span class="timemark">
+									[2015-03-04
+        14:02:00]
+								</span>
+								<span>[INFO] 命令明细：
+							</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:02:00]</span>
+								<span>[INFO]
+        -------------------------------------------------------------------------
+							</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:02:00]</span>
+								<span>[INFO]
+        #!/bin/sh
+							</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:02:00]</span>
+								<span>[INFO] ls
+							</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:02:00]</span>
+								<span>[INFO]
+        -------------------------------------------------------------------------
+							</span></p>
+
+                    <p>
+                        <span class="timemark">[2015-03-04 14:02:00]</span><span class="error">
+								[ERROR]
+        执行命令失败: 错误信息：Cannot run program
+        "/Users/maven/BaiDuPan/m/Work/IBM/BOC/ServerConfiguration/trunk/code/sc_backrestore/target/classes/backupScripts/webag_program_backup.sh":
+        error=13, Permission denied
+						
+						java.io.IOException: Cannot run program
+        "/Users/maven/BaiDuPan/m/Work/IBM/BOC/ServerConfiguration/trunk/code/sc_backrestore/target/classes/backupScripts/webag_program_backup.sh":
+        error=13, Permission denied
+						
+						at java.lang.ProcessBuilder.start(ProcessBuilder.java:1047)
+						
+						at
+        java.lang.Runtime.exec(Runtime.java:617)
+						
+						at java.lang.Runtime.exec(Runtime.java:450)
+						
+						at
+        java.lang.Runtime.exec(Runtime.java:347)
+						
+						at com.ibmboc.server_conf.executor.Runner.run(Runner.java:41)
+						
+						at com.ibmboc.server_conf.scheduleJob.job.BackupWebAGProgramJob.execute(BackupWebAGProgramJob.java:27)
+						
+						at
+        org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+						
+						at
+        org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+						
+						Caused by: java.io.IOException:
+        error=13, Permission denied
+						
+						at java.lang.UNIXProcess.forkAndExec(UNIXProcess.java)
+						
+						at
+        java.lang.UNIXProcess.
+								<init>
+                                    (UNIXProcess.java:184)
+
+                                    at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+
+                                    at
+                                    java.lang.ProcessBuilder.start(ProcessBuilder.java:1028)
+
+                                    ... 7 more
+                                </init>
+							</span></p>
+                    <p>
+                        <span class="timemark">[2015-03-04 14:02:00]</span>
+								<span>[INFO]
+            执行完成Job：Job_BackUp.Job_Backup_WebAG_Program
+        </span></p>
+                </div>
+            </dd>
+            <dd><em class="time">14:30:01</em>
+                <a href="javascript:void(0)" id="JobLog_2015-03-04_14-01-21" filename="JobLog_2015-03-04_14-01-21.log">JobLog_2015-03-04_14-01-21.log</a>
+            </dd>
+            <dd>
+                <em class="time">14:30:01</em>
+                <a href="javascript:void(0)" id="JobLog_2015-03-04_14-01-21" filename="JobLog_2015-03-04_14-01-21.log">JobLog_2015-03-04_14-01-21.log</a>
+            </dd>
+            <dd>
+                <em class="time">14:30:01</em>
+                <a href="javascript:void(0)" id="JobLog_2015-03-04_14-01-21" filename="JobLog_2015-03-04_14-01-21.log">JobLog_2015-03-04_14-01-21.log</a>
+            </dd>
+            <dd>
+                <em class="time">14:30:01</em>
+                <a href="javascript:void(0)" id="JobLog_2015-03-04_14-01-21" filename="JobLog_2015-03-04_14-01-21.log">JobLog_2015-03-04_14-01-21.log</a>
+            </dd>
+            <dd>
+                <em class="time">14:30:01</em>
+                <a href="javascript:void(0)" id="JobLog_2015-03-04_14-01-21" filename="JobLog_2015-03-04_14-01-21.log">JobLog_2015-03-04_14-01-21.log</a>
+            </dd>
+            <dd>
+                <em class="time">14:30:01</em>
+                <a href="javascript:void(0)" id="JobLog_2015-03-04_14-01-21" filename="JobLog_2015-03-04_14-01-21.log">JobLog_2015-03-04_14-01-21.log</a>
+            </dd>
+            <dd>
+                <em class="time">14:30:01</em>
+                <a href="javascript:void(0)" id="JobLog_2015-03-04_14-01-21" filename="JobLog_2015-03-04_14-01-21.log">JobLog_2015-03-04_14-01-21.log</a>
+            </dd>
+            <dt>2015-03-04</dt>
+            <dd>
+                <em class="time">14:30:01</em>
+                <a href="javascript:void(0)" id="JobLog_2015-03-04_14-01-21" filename="JobLog_2015-03-04_14-01-21.log">JobLog_2015-03-04_14-01-21.log</a>
+            </dd>
+
+            <dl>
+    </div>
+    <div class="footer tac">--版权归IBM中行网银项目组所有--</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>sc_parent</artifactId>
+        <groupId>com.ibmboc.server_conf</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../sc_parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>sc_web</artifactId>
+    <packaging>war</packaging>
+    <name>sc_web Maven Webapp</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ibmboc.server_conf</groupId>
+            <artifactId>sc_backrestore</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-servlet_2.4_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <classifier>jdk15</classifier>
+        </dependency>
+        <!--<dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>-->
+    </dependencies>
+
+    <build>
+        <finalName>sc_web</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.1.1</version>
+                    <configuration>
+                        <packagingExcludes>WEB-INF/web.xml</packagingExcludes>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>2.2</version>
+                    <configuration>
+                        <url>http://22.18.61.194:10080/manager/text</url>
+                        <!--Tomcat管理地址-->
+                        <username>tomcat</username>
+                        <!--Tomcat管理账号-->
+                        <password>tomcat</password>
+                        <!--Tomcat管理密码-->
+                        <uriEncoding>UTF-8</uriEncoding>
+                        <!--<executor>194_tomcat7_sc_10080</executor>-->
+                        <update>true</update>
+                        <!--应用存在直接更新，防止报错-->
+                        <path>/sc</path>
+                        <!--访问地址-->
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

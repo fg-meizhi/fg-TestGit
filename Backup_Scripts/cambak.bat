@@ -1,0 +1,1 @@
+MySQLdump -uroot -p123456 -h 22.18.61.88 cam> F:\Backup\CAM\Database\Data_Dump\cam_%date:~,4%%date:~5,2%%date:~8,2%.sql
